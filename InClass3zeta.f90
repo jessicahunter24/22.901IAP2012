@@ -18,7 +18,7 @@ implicit none
   STOP
 end program zeta
 
-
+!!!!!!!!!!!!
 
 subroutine zeta_sub(x,zeta_var)
 
@@ -35,12 +35,20 @@ implicit none
 
 end subroutine zeta_sub
 
+!!!!!!!!!!
 
-
-function zeta_fun()
+function zeta_fun(x)
 
 implicit none
-real :: zeta_fun
+  ! function name
+  real :: zeta_fun
+  ! formal variable
+  real :: x !input variable
+  !local variable
+  real :: pi=3.1415926 !the constant pi
+  
+  !math
+  zeta_fun=pi/x
 
 
 end function zeta_fun()
