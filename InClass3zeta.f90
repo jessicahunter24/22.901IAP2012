@@ -6,7 +6,7 @@ implicit none
 
   ! Ask user fo rinput
   print *, 'Enter x'
-  read *, v
+  read *, x
 
   ! Call subroutine zeta_sub()
   call zeta_sub(x,zeta_var)
@@ -51,4 +51,4 @@ implicit none
   zeta_fun=pi/x
 
 
-end function zeta_fun()
+end function zeta_fun
