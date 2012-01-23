@@ -17,7 +17,7 @@ implicit none
   rad=gamma*(pi/180.0)
   
   !Do law of cosines
-  c=sqrt(a**2+b**2-(2*a*b*cos(rad)))
+  c=sqrt(a**2+b**2-(2.0*a*b*cos(rad)))
   
   !print out answer to reader
   print *,'The length of side c is:',c,''//trim(unitstr)
