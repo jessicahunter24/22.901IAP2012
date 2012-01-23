@@ -2,7 +2,7 @@ program endass2
 
 implicit none
   
-  real              :: a,b,c,gamma
+  real              :: a,b,c,gamma,pi,rad
   character(len=11) :: unitstr
   
   print *, "Enter the length of sides a and b"
@@ -13,11 +13,14 @@ implicit none
   read *, gamma
   
   !convert degrees to radians
+  pi=4.0*atan(1.0)
+  rad=gamma*(pi/180.0)
   
+  !Do law of cosines
+  c=sqrt(a**2+b**2-(2*a*b*cos(rad)))
   
-  
-  
-  print *,'The length of side c is:',c,' '//trim(unitstr)
+  !print out answer to reader
+  print *,'The length of side c is:',c,''//trim(unitstr)
 
   STOP
 
